@@ -46,7 +46,7 @@ public class ChatServer extends JFrame {
         panel.add(userScrollPane, BorderLayout.EAST);
     }
 
-    public void log(String msg){
+    public void log(){
         
     }
 
