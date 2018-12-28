@@ -16,9 +16,11 @@ public class Server extends JFrame {
     * UI components
     */
     public static final String TITLE = "Auction Server";
+    private JTextArea txtArea;
 
 
     public Server(int socket, StockDB users) {
+        this.stockDatabase = users;
         /*
         * UI stuff
         */
@@ -30,7 +32,7 @@ public class Server extends JFrame {
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         setLocationRelativeTo(null);
         //*********************
-        this.stockDatabase = users;
+
 
         try {
             this.serverSocket = new ServerSocket(socket);
@@ -49,27 +51,38 @@ public class Server extends JFrame {
 
         String[] symbol = {"FB","VRTU","MSFT","GOOGL","YHOO","XLNX","TSLA","TXN"};
 
-        String[][] data= new String[colNames.length][symbol.length];
+        String[][] data= new String[symbol.length][colNames.length];
 
-        try {
-            System.out.println(stockDatabase.findSecurityName("FB"));
+
+
+        for (int i=0;i<symbol.length;i++){
+            data[i][0]=symbol[i];
+            data[i][1]=stockDatabase.findSecurityName(symbol[i]);
+            data[i][2]=stockDatabase.findSecurityPrice(symbol[i]);
         }
-        catch (Exception e){
-            System.out.println(e);
-        }
 
-
-//        for (int i=0;i<symbol.length;i++){
-//            data[0][i]=symbol[i];
-//            data[1][i]=stockDatabase.findSecurityName(symbol[i]);
-//            System.out.println(data[i][0]);
-//            //data[2][i]=stockDatabase.findSecurityPrice(symbol[i]);
-//        }
-
-        JTable currentPrice = new JTable(data, colNames);
-        currentPrice.setBounds(30,40,200,300);
+        JTable currentPrice = new JTable(data, colNames){
+            @Override
+            public boolean isCellEditable(int row, int column) {
+                return false;
+            }
+        };
         JScrollPane tableSP = new JScrollPane(currentPrice);
+        tableSP.setPreferredSize(new Dimension(200,200));
+        tableSP.setBorder(BorderFactory.createTitledBorder("Current Price"));
         panel.add(tableSP, BorderLayout.CENTER);
+
+
+        txtArea = new JTextArea();
+        txtArea.setEditable(false);
+        txtArea.setLineWrap(true);
+        txtArea.setWrapStyleWord(true);
+
+        JScrollPane historySP = new JScrollPane(txtArea);
+        historySP.setPreferredSize(new Dimension(200,200));
+        historySP.setBorder(BorderFactory.createTitledBorder("Bid History"));
+        panel.add(historySP, BorderLayout.SOUTH);
+
 
     }
 
