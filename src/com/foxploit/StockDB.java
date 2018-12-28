@@ -11,13 +11,13 @@ public class StockDB {
     private Map<String, String[]> stockList;
     private String[] fields;
 
-    public StockDB(String cvsFile, String key, String val1, String val2) {
+    public StockDB(String csvFile, String key, String val1, String val2) {
 
         FileReader fileRd;
         BufferedReader reader;
 
         try {
-            fileRd = new FileReader(cvsFile);
+            fileRd = new FileReader(csvFile);
             reader = new BufferedReader(fileRd);
 
             /* read the CSV file's first line which has

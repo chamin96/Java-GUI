@@ -44,6 +44,33 @@ public class Server extends JFrame {
         getContentPane().add(panel);
 
         panel.setLayout(new BorderLayout());
+
+        String[] colNames = {"Symbol","Security Name","Current Price"};
+
+        String[] symbol = {"FB","VRTU","MSFT","GOOGL","YHOO","XLNX","TSLA","TXN"};
+
+        String[][] data= new String[colNames.length][symbol.length];
+
+        try {
+            System.out.println(stockDatabase.findSecurityName("FB"));
+        }
+        catch (Exception e){
+            System.out.println(e);
+        }
+
+
+//        for (int i=0;i<symbol.length;i++){
+//            data[0][i]=symbol[i];
+//            data[1][i]=stockDatabase.findSecurityName(symbol[i]);
+//            System.out.println(data[i][0]);
+//            //data[2][i]=stockDatabase.findSecurityPrice(symbol[i]);
+//        }
+
+        JTable currentPrice = new JTable(data, colNames);
+        currentPrice.setBounds(30,40,200,300);
+        JScrollPane tableSP = new JScrollPane(currentPrice);
+        panel.add(tableSP, BorderLayout.CENTER);
+
     }
 
     /* each server will provide the following functions to
