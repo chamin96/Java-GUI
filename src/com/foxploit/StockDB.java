@@ -98,10 +98,4 @@ public class StockDB {
         stockList.get(key)[1] = newValue;
         System.out.println(stockList.get(key)[1]);
     }
-
-    public void printMap(){
-        for (String item : stockList.keySet()) {
-            System.out.println("key: " + item);
-        }
-    }
 }
