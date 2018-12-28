@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="506053b3-1713-4537-b022-c86ed24bd2d0" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="506053b3-1713-4537-b022-c86ed24bd2d0" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -45,7 +43,7 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/gui/TryClickMe.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1054">
+            <state relative-caret-position="944">
               <caret line="65" column="38" selection-start-line="65" selection-start-column="38" selection-end-line="65" selection-end-column="38" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -152,7 +150,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="-9" />
     <option name="width" value="978" />
     <option name="height" value="1039" />
@@ -310,7 +308,7 @@
       <workItem from="1545883492885" duration="1200000" />
       <workItem from="1545890650198" duration="1555000" />
       <workItem from="1545964808642" duration="18195000" />
-      <workItem from="1546005827583" duration="696000" />
+      <workItem from="1546005827583" duration="957000" />
     </task>
     <task id="LOCAL-00001" summary="JPanel &amp; some components added">
       <created>1545292683481</created>
@@ -421,7 +419,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="52009000" />
+    <option name="totallyTimeSpent" value="52270000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -433,7 +431,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1932886" />
@@ -676,7 +674,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/gui/TryClickMe.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1054">
+        <state relative-caret-position="944">
           <caret line="65" column="38" selection-start-line="65" selection-start-column="38" selection-end-line="65" selection-end-column="38" />
           <folding>
             <element signature="imports" expanded="true" />
