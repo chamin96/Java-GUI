@@ -1,10 +1,3 @@
-<<<<<<< HEAD
-/*  CO225 Project II Auction Server
- *   J.K.C.N.Jayasooriya - E/15/154
- *   A.H.G.D.Jayalath    - E/15/142
- */
-=======
->>>>>>> master
 package com.foxploit;
 
 import java.io.BufferedReader;
@@ -15,11 +8,7 @@ import java.util.Map;
 
 public class StockDB {
 
-<<<<<<< HEAD
-    private static Map<String, String[]> stockList;
-=======
     private Map<String, String[]> stockList;
->>>>>>> master
     private String[] fields;
 
     public StockDB(String csvFile, String key, String val1, String val2) {
@@ -107,16 +96,6 @@ public class StockDB {
     // Change Security Price
     public void changeSecurityPrice(String key, String newValue) {
         stockList.get(key)[1] = newValue;
-<<<<<<< HEAD
-        System.out.println("changed one : "+stockList.get(key)[1]);
-    }
-
-    public void printMap(){
-        for (String item : stockList.keySet()) {
-            System.out.println("key: " + item);
-        }
-=======
         System.out.println(stockList.get(key)[1]);
->>>>>>> master
     }
 }

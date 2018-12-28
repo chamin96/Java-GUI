@@ -1,10 +1,3 @@
-<<<<<<< HEAD
-/*  CO225 Project II Auction Server
- *   J.K.C.N.Jayasooriya - E/15/154
- *   A.H.G.D.Jayalath    - E/15/142
- */
-=======
->>>>>>> master
 package com.foxploit;
 
 import java.io.*;
@@ -93,11 +86,7 @@ public class Client implements Runnable {
                         }
                         this.bid = line;
                         server.changePrice(this.symbolName, this.bid);
-<<<<<<< HEAD
-                        server.addAndDisplayHistory(this.username + " Bids: " + line + " on " + new Date().toString());
-=======
                         server.postMSG(this.username + " Bids: " + line + " on " + new Date().toString());
->>>>>>> master
                         out.write(BID_POSTED);
                         out.flush();
                         outline = WAIT_BID_MSG;
