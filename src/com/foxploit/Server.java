@@ -70,7 +70,7 @@ public class Server extends JFrame {
         JScrollPane tableSP = new JScrollPane(currentPrice);
         tableSP.setPreferredSize(new Dimension(200,200));
         tableSP.setBorder(BorderFactory.createTitledBorder("Current Price"));
-        panel.add(tableSP, BorderLayout.CENTER);
+        panel.add(tableSP, BorderLayout.NORTH);
 
 
         txtArea = new JTextArea();
