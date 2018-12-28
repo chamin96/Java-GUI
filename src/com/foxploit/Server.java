@@ -1,10 +1,7 @@
-<<<<<<< HEAD
 /*  CO225 Project II Auction Server
  *   J.K.C.N.Jayasooriya - E/15/154
  *   A.H.G.D.Jayalath    - E/15/142
  */
-=======
->>>>>>> master
 package com.foxploit;
 
 import javax.swing.*;
@@ -12,18 +9,11 @@ import java.awt.*;
 import java.io.IOException;
 import java.net.ServerSocket;
 import java.net.Socket;
-<<<<<<< HEAD
 import java.util.ArrayList;
 
 public class Server extends JFrame {
     public static final int BASE_PORT = 2000;   // The base port for the server
     public static ArrayList<String> historyList = new ArrayList<>();
-=======
-
-public class Server extends JFrame {
-    public static final int BASE_PORT = 2000;   // The base port for the server
-
->>>>>>> master
     private ServerSocket serverSocket = null;   // Server Socket for main server
     private StockDB stockDatabase;              // Stock database
 
@@ -36,27 +26,14 @@ public class Server extends JFrame {
 
     public Server(int socket, StockDB users) {
         this.stockDatabase = users;
-<<<<<<< HEAD
 
         //UI stuff
         createView();
-=======
-        /*
-        * UI stuff
-        */
-        createView();
-
->>>>>>> master
         setTitle(TITLE);
         setSize(500,400);
         setResizable(true);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         setLocationRelativeTo(null);
-<<<<<<< HEAD
-=======
-        //*********************
-
->>>>>>> master
 
         try {
             this.serverSocket = new ServerSocket(socket);
@@ -119,7 +96,6 @@ public class Server extends JFrame {
     }
 
 
-<<<<<<< HEAD
     public synchronized void changePrice(String key, String newValue) {
         // should these be synchronized?
         // TODO : Check future about synchronized
@@ -132,31 +108,16 @@ public class Server extends JFrame {
         notifyAll();
     }
 
-=======
-    public void changePrice(String key, String newValue) {
-        // should these be synchronized?
-        // TODO : Check future about synchronized
-        stockDatabase.changeSecurityPrice(key, newValue);
-    }
-
-
->>>>>>> master
     /* server will define how the messages should be posted
      * this will be used by the connection servers
      */
 
-<<<<<<< HEAD
     public void addAndDisplayHistory(String msg) {
         // all threads print to same screen
         // TODO : Handle display
         // Add to the history
         historyList.add(msg);
         System.out.println(historyList);
-=======
-    public void postMSG(String msg) {
-        // all threads print to same screen
-        // TODO : Handle display
->>>>>>> master
         System.out.println(msg);
     }
 
