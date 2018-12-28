@@ -1,5 +1,14 @@
+<<<<<<< HEAD
+/*  CO225 Project II Auction Server
+*   J.K.C.N.Jayasooriya - E/15/154
+*   A.H.G.D.Jayalath    - E/15/142
+ */
+
+package com.foxploit;
+=======
 package com.foxploit;
 
+>>>>>>> master
 import javax.swing.*;
 
 public class Main {
